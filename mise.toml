@@ -1,0 +1,28 @@
+[tools]
+maven = "3.9.9"
+java = "21"
+
+[tasks.check]
+run = "git diff --check"
+
+[tasks."HelloFX:Maven:hellofx:build"]
+run = "mvn verify"
+dir = "HelloFX/Maven/hellofx"
+
+[tasks."HelloFX:Maven:hellofx:test"]
+run = "mvn test"
+dir = "HelloFX/Maven/hellofx"
+
+[tasks.build]
+run = "mvn verify"
+
+[tasks.test]
+run = "mvn test"
+
+[tasks."HelloFX:Gradle:hellofx:build"]
+run = "./gradlew build"
+dir = "HelloFX/Gradle/hellofx"
+
+[tasks."HelloFX:Gradle:hellofx:test"]
+run = "./gradlew test"
+dir = "HelloFX/Gradle/hellofx"
